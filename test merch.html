@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #container{
+        width: 600px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: khaki;
+    }
+    #container *{
+        background-color: black;
+        height: 100px;
+        width: 70px;
+    }
+    #container *:hover{
+        cursor: pointer;
+        box-shadow: 0 0 10px red;
+    }
+    #container *:active{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="item1" onclick="selectItem('item1')"></div>
+        <div id="item2" onclick="selectItem('item2')"></div>
+        <div id="item3" onclick="selectItem('item3')"></div>
+        <div id="item4" onclick="selectItem('item4')"></div>
+        <div id="item5" onclick="selectItem('item5')"></div>
+        <div id="item6" onclick="selectItem('item6')"></div>
+    </div>
+</body>
+<script>
+    function selectItem(selectedItem){
+        const item = document.getElementById(selectedItem).style;
+        if(item.style.backgroundColor == 'black')
+            item.backgroundColor = 'red';
+        else{
+            item.style.backgroundColor ='black';
+        }
+    }
+</script>
+</html>
