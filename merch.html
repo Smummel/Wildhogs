@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildhogs</title>
+    <link rel="stylesheet" href="merch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="shadowMaker">
+            <h1>Wildhogs</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <span class="navActivePage">Merch</span>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <article>
+            <h2>Merchandise</h2>
+            <div class="merch">
+                <div id="item1" onmouseover="infoItem1()" onclick="select('item1')">
+                    <img src="Jacket.webp" alt="" title="WildHogs Jacka">
+                    <p>300 kr</p><h3>300</h3>
+                </div>
+                <div id="item2" onmouseover="infoItem2()"onclick="select('item2')">
+                    <img src="shirt.webp" alt="" title="WildHogs T-shirt">
+                    <p>200 kr</p><h3>200</h3>
+                </div>
+                <div id="item3" onmouseover="infoItem3()" onclick="select('item3')">
+                    <img src="helmet.webp" alt="" title="WildHogs Hjälm">
+                    <p>500 kr</p><h3>500</h3>
+                </div>
+                <div id="info">Välkommen till WildHogs butiken! Här finner du våra handelsvaror.</div>
+                <div id="total">Total: 0kr</div>
+            </div>
+        </article>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
