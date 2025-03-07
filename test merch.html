@@ -24,11 +24,17 @@
         align-items: center;
         justify-content: space-evenly;
         background-color: khaki;
+        border: 2px solid black;
     }
     #container *{
-        background-color: red;
+        background-color: white;
         height: 100px;
         width: 70px;
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        border: 2px solid black;
     }
     #container *:hover{
         cursor: pointer;
@@ -37,25 +43,40 @@
     #container *:active{
         cursor: pointer;
     }
+    #total{
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        margin-left: 50px;
+        border: 2px solid black;
+        font-size: 4rem;
+        text-align: center;
+        user-select: none;
+    }
 </style>
 <body>
     <div id="container">
-        <div id="item1" onclick="selectItem('item1')"></div>
-        <div id="item2" onclick="selectItem('item2')"></div>
-        <div id="item3" onclick="selectItem('item3')"></div>
-        <div id="item4" onclick="selectItem('item4')"></div>
-        <div id="item5" onclick="selectItem('item5')"></div>
-        <div id="item6" onclick="selectItem('item6')"></div>
+        <div id="item1" onclick="selectItem('item1')">32</div>
+        <div id="item2" onclick="selectItem('item2')">16</div>
+        <div id="item3" onclick="selectItem('item3')">8</div>
+        <div id="item4" onclick="selectItem('item4')">4</div>
+        <div id="item5" onclick="selectItem('item5')">2</div>
+        <div id="item6" onclick="selectItem('item6')">1</div>
     </div>
+    <div id="total"></div>
 </body>
 <script>
+    displayNumber = 0
     function selectItem(selectedItem){
         const item = document.getElementById(selectedItem);
-        if(item.style.backgroundColor === 'black')
+        if(item.style.backgroundColor === 'red'){
+            item.style.backgroundColor = 'white';
+            displayNumber-=Number(item.innerHTML);
+        } else{
             item.style.backgroundColor = 'red';
-        else{
-            item.style.backgroundColor = 'black';
+            displayNumber+=Number(item.innerHTML);
         }
+        document.getElementById('total').innerHTML = displayNumber;
     }
 </script>
 </html>
