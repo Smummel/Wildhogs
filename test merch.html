@@ -26,7 +26,7 @@
         background-color: khaki;
     }
     #container *{
-        background-color: black;
+        background-color: red;
         height: 100px;
         width: 70px;
     }
@@ -50,11 +50,11 @@
 </body>
 <script>
     function selectItem(selectedItem){
-        const item = document.getElementById(selectedItem).style;
-        if(item.style.backgroundColor == 'black')
-            item.backgroundColor = 'red';
+        const item = document.getElementById(selectedItem);
+        if(item.style.backgroundColor === 'black')
+            item.style.backgroundColor = 'red';
         else{
-            item.style.backgroundColor ='black';
+            item.style.backgroundColor = 'black';
         }
     }
 </script>
